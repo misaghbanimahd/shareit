@@ -44,7 +44,7 @@ def convert(update,context):
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('Select from below options whether you want to short or unshort your url', reply_markup=reply_markup)
     else:
-        update.message.reply_text("<i>⚠️ ابتدا در کانال @hamrahmedia عضو شوید و سپس لینک خود را بفرستید </i>",parse_mode=telegram.ParseMode.HTML)
+        update.message.reply_text("<i>⚠️ ابتدا در کانال @hamrahmedia عضو شوید و سپس لینک خود را به صورت صحیح و کامل بفرستید </i>",parse_mode=telegram.ParseMode.HTML)
     	
 @run_async
 def button(update,context):
