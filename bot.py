@@ -48,7 +48,7 @@ def convert(update,context):
     else:
         update.message.reply_text("<i>⚠️ Url must start with http:// or https:// and it should not have spaces in it.</i>",parse_mode=telegram.ParseMode.HTML)
     else:
-	update.message.reply_text("ggg",parse_mode=telegram.ParseMode.HTML)
+	update.message.reply_text("<i>⚠️ Url must start with http:// or https:// and it should not have spaces in it.</i>",parse_mode=telegram.ParseMode.HTML)
 @run_async
 def button(update,context):
     query=update.callback_query
