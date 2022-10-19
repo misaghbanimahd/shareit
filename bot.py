@@ -36,8 +36,8 @@ def convert(update,context):
     link=update.message.text
     pattern1="https://*"
     pattern2="http://*"
-	chat_id = "@hamrahmedia"
-	user_id = update.message.from_user.id
+	chat_id="@hamrahmedia"
+	user_id=update.message.chat.id
 	
 	
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
