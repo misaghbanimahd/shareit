@@ -39,7 +39,7 @@ def convert(update,context):
     chat="@hamrahmedia"
     user=update.message.from_user.id
     check=context.bot.getChatMember(chat,user)
-
+update.message.reply_text('Hi! '+str(check.status)+' \n\nWelcome to Link Expert Bot.\nThis bot can short long urls , and also unshort various short urls type /help to know how to use this bot.')
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
