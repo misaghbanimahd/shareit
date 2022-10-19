@@ -36,7 +36,10 @@ def convert(update,context):
     link=update.message.text
     pattern1="https://*"
     pattern2="http://*"
-	 check = context.bot.getChatMember("@hamrahmedia",update.message.chat.first_name)
+	chat_id = "@hamrahmedia"
+	user_id = update.message.from_user.id
+	check = context.bot.getChatMember(chat_id,user_id)
+	
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
