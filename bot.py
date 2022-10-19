@@ -39,10 +39,13 @@ def convert(update,context):
     chat="@hamrahmedia"
     user=update.message.from_user.id
     check=context.bot.getChatMember(chat,user)
-    if(check.status=="administrator") and (re.search(pattern1,link)) or (re.search(pattern2,link)):
+    if(re.search(pattern1,link)) or (re.search(pattern2,link)):
+		if(check.status=="administrator")
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('Select from below options whether you want to short or unshort your url', reply_markup=reply_markup)
+	else:
+	update.message.reply_text("<i>⚠️ ozve kanalshid</i>",parse_mode=telegram.ParseMode.HTML)
     else:
         update.message.reply_text("<i>⚠️ Url must start with http:// or https:// and it should not have spaces in it.</i>",parse_mode=telegram.ParseMode.HTML)
 
