@@ -38,7 +38,7 @@ def convert(update,context):
     pattern2="http://*"
     chat="@hamrahmedia"
     user=update.message.from_user.id
-    check=context.bot.getChatMember(chat,user)
+    
 	
     if check:
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
