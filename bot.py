@@ -38,9 +38,9 @@ def convert(update,context):
     pattern2="http://*"
     chat="@hamrahmedia"
     user=update.message.from_user.id
-    check="hhhh"
+    check="__main__"
 	
-    if check:
+    if check == '__main__':
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
