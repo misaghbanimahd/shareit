@@ -40,7 +40,7 @@ def convert(update,context):
     user=update.message.from_user.id
     check=context.bot.getChatMember(chat,user)
 	
-    if check:
+    
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
