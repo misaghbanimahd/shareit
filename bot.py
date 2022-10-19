@@ -2,6 +2,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters,ConversationHandler,CallbackQueryHandler,InlineQueryHandler
 import telegram
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup,InputTextMessageContent,InlineQueryResultArticle
+from telegram.apihelper import ApiTelegramException
 import logging
 import os
 import unshortenit
