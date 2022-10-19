@@ -38,7 +38,7 @@ def convert(update,context):
     pattern2="http://*"
 	chat_id = "@hamrahmedia"
 	user_id = update.message.from_user.id
-	check = context.bot.getChatMember(chat_id,user_id)
+	
 	
     if(re.search(pattern1,link)) or (re.search(pattern2,link)):
         keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
