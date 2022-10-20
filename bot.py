@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 @run_async
 def start(update,context):
     first=update.message.chat.first_name
-    update.message.reply_text('Hi! '+str(first)+' \n\nبه ربات کوتاه کننده لینک خوش اومدید\nشما با استفاده از این ربات می تونید لینکهای بلند رو کوتاه را یا بر عکس لینکهای کوتاه رو بلند کنید . اولین لینک خودتون رو همین حالا بفرستید')
+    update.message.reply_text('Hi! '+str(first)+' \n\nبه ربات کوتاه کننده لینک خوش اومدید\nشما با استفاده از این ربات می تونید لینکهای بلند رو کوتاه ، یا بر عکس لینکهای کوتاه رو بلند کنید . اولین لینک خودتون رو همین حالا بفرستید')
 
 inlinekeyboard=[[InlineKeyboardButton("Go inline in other chats", switch_inline_query="")]]
 switch_inline=InlineKeyboardMarkup(inlinekeyboard)
