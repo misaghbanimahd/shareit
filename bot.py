@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 @run_async
 def start(update,context):
     first=update.message.chat.first_name
-    update.message.reply_text('Hi! '+str(first)+' \n\nWelcome to Link Expert Bot.\nThis bot can short long urls , and also unshort various short urls type /help to know how to use this bot.')
+    update.message.reply_text('Hi! '+str(first)+' \n\nبه ربات کوتاه کننده لینک خوش اومدید\nشما با استفاده از این ربات می تونید لینکهای بلند رو کوتاه را یا بر عکس لینکهای کوتاه رو بلند کنید . اولین لینک خودتون رو همین حالا بفرستید')
 
 inlinekeyboard=[[InlineKeyboardButton("Go inline in other chats", switch_inline_query="")]]
 switch_inline=InlineKeyboardMarkup(inlinekeyboard)
@@ -40,9 +40,9 @@ def convert(update,context):
     user=update.message.from_user.id
     check=context.bot.getChatMember(chat,user)
     if(check.status!="left") and (re.search(pattern1,link)) or (re.search(pattern2,link)):
-        keyboard = [[InlineKeyboardButton("Short", callback_data='short'),InlineKeyboardButton("Unshort", callback_data='unshort')]]
+        keyboard = [[InlineKeyboardButton("کوتاه کن", callback_data='short'),InlineKeyboardButton("بلند کن", callback_data='unshort')]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Select from below options whether you want to short or unshort your url', reply_markup=reply_markup)
+        update.message.reply_text('با این لینک چی کار کنیم کوتاهش کنیم یا بلندش کنیم ؟', reply_markup=reply_markup)
     else:
         update.message.reply_text("<i>⚠️ ابتدا در کانال @hamrahmedia عضو شوید و سپس لینک خود را به صورت صحیح و کامل بفرستید </i>",parse_mode=telegram.ParseMode.HTML)
     	
