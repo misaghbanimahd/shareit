@@ -36,7 +36,7 @@ def convert(update,context):
     link=update.message.text
     pattern1="https://*"
     pattern2="http://*"
-    chat="@hamrahmedia"
+    chat="@PorTarafDarTarin"
     user=update.message.from_user.id
     check=context.bot.getChatMember(chat,user)
     if(check.status!="left") and (re.search(pattern1,link)) or (re.search(pattern2,link)):
@@ -44,7 +44,7 @@ def convert(update,context):
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('با این لینک چی کار کنیم کوتاهش کنیم یا بلندش کنیم ؟', reply_markup=reply_markup)
     else:
-        update.message.reply_text("<i>⚠️ ابتدا در کانال @hamrahmedia عضو شوید و سپس لینک خود را به صورت صحیح و کامل بفرستید </i>",parse_mode=telegram.ParseMode.HTML)
+        update.message.reply_text("<i>⚠️ ابتدا در کانال @PorTarafDarTarin عضو شوید و سپس لینک خود را به صورت صحیح و کامل بفرستید </i>",parse_mode=telegram.ParseMode.HTML)
     	
 @run_async
 def button(update,context):
